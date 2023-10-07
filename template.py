@@ -8,19 +8,20 @@ project_name = "YOUR_PROJECT_NAME"
 
 list_of_files = [
     ".github/workflows/.gitkeep",
-    f"src/_init_.py",
-    f"src/components/_init.py", 
-    f"src/utils/__init_.py",
-    f"src/config/_init_.py",
+    f"src/__init__.py",
+    f"src/components/__init__.py", 
+    f"src/utils/__init__.py",
+    f"src/config/__init__.py",
     f"src/config/configuration.py",
-    f"src/pipeline/_init_.py",
-    f"src/entity/_init_.py",
-    f"src/constants/_init_.py",
+    f"src/pipeline/__init__.py",
+    f"src/entity/__init__.py",
+    f"src/constants/__init__.py",
     "config/config.yaml",
     "dvc.yaml",
     "params.yaml",
     "requirements.txt",
     "setup.py",
+    "main.py",
     "notebooks/trials.ipynb",
     "templates/index.html",
 ]
@@ -36,7 +37,7 @@ for filepath in list_of_files:
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath, "w") as f:
             pass
-            logging.info(f"Creating empty file: {filepath}")
+        logging.info(f"Creating empty file: {filepath}")
     
     else:
         logging.info(f"{filename} already exists")
